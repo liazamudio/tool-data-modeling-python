@@ -1,247 +1,70 @@
-# Modelos de Análisis de Datos - Data Modeling
+# Data Modeling con Python
 
-Este directorio contiene notebooks de Python que implementan y explican diferentes modelos de análisis de datos, tanto supervisados como no supervisados.
+Colección de notebooks educativos que implementan, paso a paso, los modelos de análisis de datos más usados en ciencia de datos — para quien está aprendiendo Machine Learning y quiere ver cada algoritmo aplicado a un caso de uso realista, no solo la teoría.
 
-## 📚 Estructura de Notebooks
+<!-- COMPLETAR: agrega un GIF o captura de pantalla mostrando una de las visualizaciones generadas por los notebooks (ej. el árbol de decisión, los clusters de K-means o la curva ROC), ya que no se pudo generar una imagen sin ejecutar el código -->
 
-### Modelos Supervisados
+## Problema / Motivación
 
-#### 1. Clasificación
+<!-- COMPLETAR: no hay forma de inferir del código por qué se creó este repositorio (curso propio, ejercicio de una bootcamp, material de estudio personal, etc.). Agrega 2-3 líneas explicando la motivación real -->
 
-##### 🌳 1_arboles_decision.ipynb - Árboles de Decisión
-**Descripción**: Los árboles de decisión son modelos que toman decisiones mediante una serie de preguntas basadas en las características de los datos.
+## Demo
 
-**Caso de uso**: Clasificación de especies de flores Iris basándose en características como longitud y ancho de pétalos y sépalos.
+<!-- COMPLETAR: no hay demo pública ni link desplegado en el repositorio (no hay Dockerfile, CI/CD ni configuración de hosting). Si no vas a desplegar nada, reemplaza esta sección con capturas de las gráficas/resultados de cada notebook -->
 
-**Características principales**:
-- Fácil interpretación y visualización
-- No requiere normalización de datos
-- Maneja variables categóricas y numéricas
-- Visualización del árbol de decisión
-- Análisis de importancia de características
+## Stack técnico
 
-**Librerías utilizadas**: `sklearn`, `pandas`, `matplotlib`, `seaborn`
+- **Lenguaje**: Python (Jupyter Notebooks)
+- **Machine Learning / Estadística**: `scikit-learn`, `statsmodels`, `mlxtend`
+- **Manipulación de datos**: `pandas`, `numpy`
+- **Visualización**: `matplotlib`, `seaborn`
+- **Entorno de ejecución**: Jupyter Notebook
+- **Infraestructura/Deploy**: <!-- COMPLETAR: no se encontró Dockerfile, workflow de CI/CD ni configuración de despliegue en el repositorio. Indica si este proyecto corre solo localmente o si planeas publicarlo en algún servicio (Binder, Colab, etc.) -->
 
----
+## Características principales
 
-##### 📊 2_regresion_logistica.ipynb - Regresión Logística
-**Descripción**: Modelo estadístico para problemas de clasificación binaria que predice la probabilidad de pertenencia a una clase.
+- **Árboles de Decisión** ([1_arboles_decision.ipynb](1_arboles_decision.ipynb)): clasificación de especies de flores Iris, con visualización del árbol y análisis de importancia de características.
+- **Regresión Logística** ([2_regresion_logistica.ipynb](2_regresion_logistica.ipynb)): clasificación binaria de tumores (maligno/benigno), con curva ROC, AUC y validación cruzada.
+- **Regresión Lineal** ([3_regresion_lineal.ipynb](3_regresion_lineal.ipynb)): predicción de precios de vivienda, con análisis de residuos y métricas R², MSE, RMSE y MAE.
+- **ARIMA** ([4_arima.ipynb](4_arima.ipynb)): forecasting de series temporales sobre pasajeros aéreos, con test de Dickey-Fuller y análisis ACF/PACF.
+- **K-means** ([5_kmeans.ipynb](5_kmeans.ipynb)): segmentación de clientes mediante clustering, con método del codo y Silhouette Score.
+- **Apriori** ([6_apriori.ipynb](6_apriori.ipynb)): reglas de asociación para análisis de canasta de mercado (soporte, confianza y lift).
 
-**Caso de uso**: Clasificación de tumores como malignos o benignos basándose en características del tumor.
-
-**Características principales**:
-- Proporciona probabilidades de clasificación
-- Interpretación clara mediante coeficientes
-- Curva ROC y AUC para evaluación
-- Validación cruzada
-- Normalización de características
-
-**Librerías utilizadas**: `sklearn`, `pandas`, `matplotlib`, `seaborn`
-
----
-
-#### 2. Regresión
-
-##### 📈 3_regresion_lineal.ipynb - Regresión Lineal
-**Descripción**: Modelo que predice valores continuos mediante una relación lineal entre variables independientes y dependientes.
-
-**Caso de uso**: Predicción de precios de casas basándose en características como número de habitaciones, ubicación, edad, etc.
-
-**Características principales**:
-- Predicción de valores continuos
-- Análisis de correlaciones
-- Evaluación con R², MSE, RMSE, MAE
-- Visualización de residuos
-- Análisis de coeficientes
-
-**Librerías utilizadas**: `sklearn`, `pandas`, `matplotlib`, `seaborn`, `numpy`
-
----
-
-#### 3. Series de Tiempo
-
-##### ⏱️ 4_arima.ipynb - ARIMA (AutoRegressive Integrated Moving Average)
-**Descripción**: Modelo estadístico para análisis y predicción de series temporales que combina autoregresión, integración y media móvil.
-
-**Caso de uso**: Predicción de número de pasajeros aéreos mensuales basándose en datos históricos.
-
-**Características principales**:
-- Descomposición de series temporales (tendencia, estacionalidad, residuo)
-- Prueba de estacionariedad (Test de Dickey-Fuller)
-- Análisis ACF y PACF
-- Predicciones futuras
-- Análisis de residuos
-
-**Librerías utilizadas**: `statsmodels`, `pandas`, `matplotlib`, `seaborn`, `sklearn`
-
----
-
-### Modelos No Supervisados
-
-#### 1. Agrupamiento (Clustering)
-
-##### 🎯 5_kmeans.ipynb - K-means
-**Descripción**: Algoritmo de clustering que agrupa datos en k clusters basándose en similitud de características.
-
-**Caso de uso**: Segmentación de clientes de un centro comercial en grupos basándose en edad, ingreso y comportamiento de gasto.
-
-**Características principales**:
-- Método del codo para determinar k óptimo
-- Silhouette Score para evaluación
-- Visualizaciones 2D y 3D de clusters
-- Análisis de centroides
-- Perfiles de segmentos
-
-**Librerías utilizadas**: `sklearn`, `pandas`, `matplotlib`, `seaborn`, `mpl_toolkits`
-
----
-
-#### 2. Reglas de Asociación
-
-##### 🛒 6_apriori.ipynb - Apriori
-**Descripción**: Algoritmo de minería de datos que descubre reglas de asociación entre elementos en transacciones.
-
-**Caso de uso**: Análisis de canasta de mercado para descubrir qué productos se compran juntos frecuentemente.
-
-**Características principales**:
-- Cálculo de soporte, confianza y lift
-- Identificación de patrones de compra
-- Visualización de reglas
-- Análisis de productos específicos
-- Recomendaciones de negocio
-
-**Librerías utilizadas**: `mlxtend`, `pandas`, `matplotlib`, `seaborn`, `numpy`
-
----
-
-## 🚀 Cómo Usar los Notebooks
-
-### Requisitos Previos
-
-Instalar las dependencias necesarias:
+## Cómo correrlo localmente
 
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/liazamudio/tool-data-modeling-python.git
+cd tool-data-modeling-python
+
+# 2. Crear y activar un entorno virtual (opcional pero recomendado)
+python -m venv venv
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # macOS / Linux
+
+# 3. Instalar dependencias
 pip install numpy pandas matplotlib seaborn scikit-learn statsmodels mlxtend jupyter
-```
 
-### Ejecución
-
-1. Navegar al directorio:
-```bash
-cd data-modeling
-```
-
-2. Iniciar Jupyter Notebook:
-```bash
+# 4. Iniciar Jupyter Notebook
 jupyter notebook
 ```
 
-3. Abrir el notebook deseado y ejecutar las celdas secuencialmente.
+No se requieren variables de entorno ni servicios externos: cada notebook genera o descarga sus propios datos de ejemplo (datasets sintéticos o estándar de `scikit-learn`) al ejecutarse.
 
----
+Abre cualquiera de los `.ipynb` desde la interfaz de Jupyter y ejecuta las celdas en orden.
 
-## 📊 Estructura de Cada Notebook
+## Decisiones técnicas relevantes
 
-Todos los notebooks siguen una estructura similar:
+<!-- COMPLETAR: no se puede inferir del código por qué se eligió scikit-learn/statsmodels/mlxtend sobre otras alternativas, ni qué trade-offs se consideraron (por ejemplo, notebooks vs. scripts, datasets sintéticos vs. reales). Agrega esa justificación si es relevante -->
 
-1. **Introducción y Descripción**: Explicación del modelo y caso de uso
-2. **Importación de Librerías**: Configuración del entorno
-3. **Carga y Exploración de Datos**: Análisis exploratorio del dataset
-4. **Preparación de Datos**: Limpieza, normalización y división de datos
-5. **Entrenamiento del Modelo**: Configuración y entrenamiento
-6. **Predicciones**: Generación de predicciones
-7. **Evaluación**: Métricas de rendimiento
-8. **Visualizaciones**: Gráficos explicativos
-9. **Conclusiones**: Resumen de hallazgos y aplicaciones
+## Estado del proyecto
 
----
+<!-- COMPLETAR: no se puede determinar con certeza si el proyecto sigue en desarrollo activo o ya se considera terminado. Según el historial de commits, la última actividad registrada es de noviembre de 2025 (commit "docs: Add comprehensive README..."). Indica el estado real (Activo / Mantenido / Archivado) -->
 
-## 📖 Conceptos Clave
+## Autor / Rol
 
-### Aprendizaje Supervisado
-Los modelos aprenden de datos etiquetados (entrada + salida conocida) para hacer predicciones sobre nuevos datos.
+<!-- COMPLETAR: el nombre y rol del autor no se pueden confirmar solo con el código. El repositorio está bajo la cuenta de GitHub "liazamudio" y el usuario de git configurado localmente es "Alex Zamudio" — confirma el nombre y, si fue trabajo en equipo, tu rol específico -->
 
-### Aprendizaje No Supervisado
-Los modelos encuentran patrones ocultos en datos sin etiquetas, agrupando o asociando elementos similares.
+## Licencia
 
-### Métricas de Evaluación
-
-**Clasificación**:
-- Accuracy (Precisión)
-- Precision (Exactitud)
-- Recall (Sensibilidad)
-- F1-Score
-- AUC-ROC
-
-**Regresión**:
-- R² (Coeficiente de determinación)
-- MSE (Error Cuadrático Medio)
-- RMSE (Raíz del Error Cuadrático Medio)
-- MAE (Error Absoluto Medio)
-
-**Clustering**:
-- Silhouette Score
-- Davies-Bouldin Index
-- Inercia
-
-**Reglas de Asociación**:
-- Soporte
-- Confianza
-- Lift
-
----
-
-## 🎓 Objetivos de Aprendizaje
-
-Al completar estos notebooks, comprenderás:
-
-✅ Diferencias entre aprendizaje supervisado y no supervisado
-✅ Cuándo aplicar cada tipo de modelo
-✅ Cómo preparar datos para machine learning
-✅ Interpretación de métricas de evaluación
-✅ Visualización de resultados
-✅ Aplicaciones prácticas de cada modelo
-
----
-
-## 🔧 Personalización
-
-Cada notebook puede ser modificado para:
-- Usar tus propios datasets
-- Ajustar hiperparámetros
-- Probar diferentes configuraciones
-- Experimentar con otras visualizaciones
-
----
-
-## 📝 Notas Importantes
-
-- Los notebooks usan datos sintéticos generados para fines educativos
-- Todos los ejemplos están completamente documentados
-- Se incluyen visualizaciones para facilitar la comprensión
-- Los códigos son reproducibles (semilla aleatoria fijada)
-
----
-
-## 🤝 Contribuciones
-
-Estos notebooks son recursos educativos. Siéntete libre de:
-- Modificar y experimentar
-- Añadir tus propios análisis
-- Crear versiones extendidas
-- Compartir con otros estudiantes
-
----
-
-## 📚 Referencias y Recursos Adicionales
-
-- [Scikit-learn Documentation](https://scikit-learn.org/)
-- [Statsmodels Documentation](https://www.statsmodels.org/)
-- [MLxtend Documentation](http://rasbt.github.io/mlxtend/)
-- [Pandas Documentation](https://pandas.pydata.org/)
-
----
-
-**Autor**: Generado para fines educativos
-**Fecha**: Noviembre 2025
-**Versión**: 1.0
+<!-- COMPLETAR: no se encontró un archivo LICENSE en el repositorio. Agrega uno (por ejemplo MIT o Apache 2.0) si planeas que el proyecto sea usado o reutilizado por terceros -->
