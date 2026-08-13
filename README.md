@@ -59,11 +59,12 @@ Abre cualquiera de los `.ipynb` desde la interfaz de Jupyter y ejecuta las celda
 
 ## Estado del proyecto
 
-<!-- COMPLETAR: no se puede determinar con certeza si el proyecto sigue en desarrollo activo o ya se considera terminado. Según el historial de commits, la última actividad registrada es de noviembre de 2025 (commit "docs: Add comprehensive README..."). Indica el estado real (Activo / Mantenido / Archivado) -->
+<!-- Indica el estado real (Activo / Mantenido / Archivado) -->
+Archivado por el momento.
 
 ## Autor / Rol
 
-<!-- COMPLETAR: el nombre y rol del autor no se pueden confirmar solo con el código. El repositorio está bajo la cuenta de GitHub "liazamudio" y el usuario de git configurado localmente es "Alex Zamudio" — confirma el nombre y, si fue trabajo en equipo, tu rol específico -->
+Alex Zamudio
 
 ## Licencia
 
