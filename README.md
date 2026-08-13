@@ -6,7 +6,7 @@ Colección de notebooks educativos que implementan, paso a paso, los modelos de 
 
 ## Problema / Motivación
 
-<!-- COMPLETAR: no hay forma de inferir del código por qué se creó este repositorio (curso propio, ejercicio de una bootcamp, material de estudio personal, etc.). Agrega 2-3 líneas explicando la motivación real -->
+Investigación de algoritmos de Ciencia de Datos.
 
 ## Demo
 
