@@ -43,7 +43,7 @@ venv\Scripts\activate      # Windows
 source venv/bin/activate   # macOS / Linux
 
 # 3. Instalar dependencias
-pip install numpy pandas matplotlib seaborn scikit-learn statsmodels mlxtend jupyter
+pip install -r requirements.txt
 
 # 4. Iniciar Jupyter Notebook
 jupyter notebook
@@ -67,4 +67,4 @@ Abre cualquiera de los `.ipynb` desde la interfaz de Jupyter y ejecuta las celda
 
 ## Licencia
 
-<!-- COMPLETAR: no se encontró un archivo LICENSE en el repositorio. Agrega uno (por ejemplo MIT o Apache 2.0) si planeas que el proyecto sea usado o reutilizado por terceros -->
+[MIT](LICENSE)
